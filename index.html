@@ -1,27 +1,455 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Srushti Chhapre | Embedded Systems Portfolio</title>
+
+    <style>
+
+        /* ---------- BASIC SETTINGS ---------- */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+
+        /* ---------- NAVIGATION BAR ---------- */
+
+        nav {
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* ---------- HERO SECTION ---------- */
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #4b5563;
+            font-size: 18px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .hero-button:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* ---------- COMMON SECTION ---------- */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #4b5563;
+            font-size: 17px;
+        }
+
+
+        /* ---------- SKILLS ---------- */
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skill {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 1px solid #d1d5db;
+            font-weight: bold;
+        }
+
+
+        /* ---------- PROJECTS ---------- */
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .project-button {
+            display: inline-block;
+            padding: 9px 16px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .project-button:hover {
+            background: #2563eb;
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        .contact {
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #030712;
+            color: #9ca3af;
+        }
+
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-    <h1>Srushti Chhapre</h1>
 
-    <h2>Embedded Systems Portfolio</h2>
+    <!-- NAVIGATION -->
 
-    <p>
-        Welcome to my Embedded Systems portfolio.
-    </p>
+    <nav>
 
-    <h2>My Projects</h2>
+        <div class="logo">
+            Srushti Chhapre
+        </div>
 
-    <h3>01. STM32 Inbuilt LED Blink</h3>
+        <div>
 
-    <p>
-        STM32F103C8T6 project developed using STM32CubeIDE,
-        Embedded C and STM32 HAL.
-    </p>
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>Srushti Chhapre</h1>
+
+            <h2>Embedded Systems & Firmware Enthusiast</h2>
+
+            <p>
+                Welcome to my Embedded Systems portfolio.
+                I build hands-on projects using microcontrollers,
+                Embedded C, and hardware interfaces.
+            </p>
+
+            <a class="hero-button" href="#projects">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <p class="about">
+
+            I am an Electronics & Computer Engineering student
+            interested in Embedded Systems, Firmware Development,
+            Microcontrollers, and Hardware-Software Integration.
+
+            This portfolio showcases my hands-on projects and
+            learning journey in embedded systems.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill">Embedded C</div>
+
+            <div class="skill">STM32</div>
+
+            <div class="skill">ESP32</div>
+
+            <div class="skill">GPIO</div>
+
+            <div class="skill">UART</div>
+
+            <div class="skill">SPI</div>
+
+            <div class="skill">I2C</div>
+
+            <div class="skill">LoRa</div>
+
+            <div class="skill">STM32CubeIDE</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2 class="section-title">
+            My Projects
+        </h2>
+
+
+        <div class="projects-container">
+
+
+            <!-- PROJECT 01 -->
+
+            <div class="project-card">
+
+                <h3>
+                    01. STM32 Inbuilt LED Blink
+                </h3>
+
+                <p>
+
+                    A basic STM32F103C8T6 project demonstrating
+                    GPIO configuration and LED control using
+                    Embedded C and STM32 HAL.
+
+                </p>
+
+                <p>
+
+                    <strong>Microcontroller:</strong>
+                    STM32F103C8T6
+
+                    <br>
+
+                    <strong>GPIO:</strong>
+                    PC13
+
+                    <br>
+
+                    <strong>IDE:</strong>
+                    STM32CubeIDE
+
+                </p>
+
+                <a
+                    class="project-button"
+                    href="01_Inbuilt_LED/"
+                >
+                    View Project
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title" style="color:white;">
+            Connect With Me
+        </h2>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/srushtichh0312"
+               target="_blank">
+                github.com/srushtichh0312
+            </a>
+        </p>
+
+        <p>
+            LinkedIn:
+            <a href="#" target="_blank">
+                LinkedIn Profile
+            </a>
+        </p>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Srushti Chhapre | Embedded Systems Portfolio
+
+    </footer>
+
 
 </body>
+
 </html>
